@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import NavHeader from "./components/nav-header/nav-header";
 import ProductCard from "./components/ProductsCard";
@@ -12,6 +12,8 @@ import biscoff from "./assets/products/Biscof.jpg";
 import wafflePops from "./assets/products/wafflepops.jpg";
 import saltedCaramel from "./assets/products/saltedcaramel.jpg";
 import Footer from "./components/footer/footer";
+import Modal from "./components/modal/modal";
+import ModalCard from "./components/modalcard/ModalCard";
 
 const products = [
   {
@@ -70,23 +72,15 @@ const products = [
   },
 ];
 
-const renderProducts = () => {
-  return (
-    <div className="three-column-container">
-      {products.map((product) => (
-        <div className="three-column-item" key={product.id}>
-          <ProductCard
-            name={product.name}
-            imageUrl={product.image}
-            price={product.price}
-          />
-        </div>
-      ))}
-    </div>
-  );
-};
+// const renderProducts = () => {
+
+//   return (
+
+//   );
+// };
 
 function App() {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <NavHeader />
@@ -108,15 +102,54 @@ function App() {
             <p>₦10000 +</p>
           </div>
         </div>
-        <div className="productWrapper">{renderProducts()}</div>
+        <div className="productWrapper">
+          {
+            <div className="three-column-container">
+              {products.map((product) => (
+                <div className="three-column-item" key={product.id}>
+                  <ProductCard
+                    onClick={() => {
+                      setModalVisible(true);
+                      // console.log("hi");
+                    }}
+                    name={product.name}
+                    imageUrl={product.image}
+                    price={product.price}
+                  />
+                </div>
+              ))}
+            </div>
+          }
+        </div>
       </div>
       <footer>
         <Footer />
       </footer>
+
+      {modalVisible && (
+        <Modal
+          children={
+            <ModalCard
+              description="This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product
+            This is a description of the product"
+            />
+          }
+          isOpen={modalVisible}
+          closeModal={() => setModalVisible(false)}
+          onClose={() => setModalVisible(false)}
+        ></Modal>
+      )}
     </>
   );
 }
 
 export default App;
- 
-
