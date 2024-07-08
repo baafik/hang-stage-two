@@ -1,0 +1,1 @@
+export {default as headerIcon} from "./header-logo.png"
