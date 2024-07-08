@@ -1,62 +1,98 @@
-.nav-bar {
-  background-color: #ffe1db;
-  color: #fff;
-  display: flex;
-  /* justify-content: space-between; */
-  padding: 10px;
-  align-items: flex-end;
-  /* width: 1000px; */
-}
-
 .header-view {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* width: 100%; */
   background-color: #ffe1db;
-  width: "100%";
-}
-
-.icons-view {
-  align-self: flex-end;
-  /* display: flex; */
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.wrapper {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is included in width */
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  flex-direction: row;
-  /* background-color: aquamarine; */
-  /* width: 10px; */
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .image-view {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Aligns logo to the left */
   align-items: center;
-  width: 100%;
-  background-color: #ffe1db;
 }
 
-.nav-bar ul {
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  width: auto;
+}
+
+.nav-bar {
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-item a {
+  color: #0d0d0e;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+.icons-view {
   display: flex;
   align-items: center;
 }
 
-.nav-bar ul li {
-  margin-right: 10px;
+.icon-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-bar a {
-  color: #0d0d0e;
-  text-decoration: none;
+.icon-item {
+  margin-left: 10px;
 }
 
-.nav-bar a:hover {
-  text-decoration: underline;
+.icon-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-bar {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin: 5px;
+  }
+
+  .icons-view {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .image-view {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

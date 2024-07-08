@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <h3>About Us</h3>
         <p>
           More Than Wafels is a company that specializes in Delicious, Artisan
-          Belgian Waffles & Brunch treats
+          Belgian Waffles & Brunch treats.
         </p>
       </div>
       <div className="column">
@@ -23,9 +23,8 @@ const Footer: React.FC = () => {
       </div>
       <div className="column">
         <h3>Contact Us</h3>
-
         <div className="item-wrap">
-          <img src={messageIcon} alt="call icon" />
+          <img src={messageIcon} alt="email icon" />
           <p>morethanwafels@gmail.com</p>
         </div>
         <div className="item-wrap">
@@ -33,7 +32,6 @@ const Footer: React.FC = () => {
           <p>+2348176754434</p>
         </div>
       </div>
-
       <div className="column">
         <img src={instagram} alt="instagram" />
         <img src={twitter} alt="twitter" />
