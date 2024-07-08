@@ -1,0 +1,22 @@
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* margin-bottom: 0.5rem; */
+  color: #0d0d0e;
+}
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #0d0d0e;
+}
+.add-to-cart-button {
+  background-color: #ffe1db;
+  color: #0d0d0e;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
