@@ -92,23 +92,21 @@ function App() {
       <NavHeader />
       <div className="body-wrapper">
         <div className="center-div">
-          <h1 className="productHeader">Browse by categories</h1>
-          <h2>All</h2>
+          <h1 className="productHeader">Browse by Category</h1>
+          <h4>All</h4>
           <p>Pre-packed</p>
           <p>Savoury</p>
           <p>Sweet</p>
           <p>Premium</p>
-          
-      <div className="body-wrapper">
-        <div className="left-div">
-          <h2 className="productHeader">Filter by price</h2>
-          <p>₦2500 - ₦4000</p>
-          <p>₦4000 - ₦6000</p>
-          <p>₦6000 - ₦8000</p>
-          <p>₦8000 - ₦10000</p>
-          <p>₦10000 +</p>
-        </div>
-      </div>
+
+          <div>
+            <h4>Filter by price</h4>
+            <p>₦2500 - ₦4000</p>
+            <p>₦4000 - ₦6000</p>
+            <p>₦6000 - ₦8000</p>
+            <p>₦8000 - ₦10000</p>
+            <p>₦10000 +</p>
+          </div>
         </div>
         <div className="productWrapper">{renderProducts()}</div>
       </div>
