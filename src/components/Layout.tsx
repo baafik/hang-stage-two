@@ -4,11 +4,13 @@ import Header from "./Header"
 
 const Layout:FC<{children: ReactNode}> = ({children}) => {
   return (
-    <main className="w-screen h-max font-inika bg-red-500/0">
+    <div className="w-screen h-max font-inika bg-red-500/0 space-y-4">
         <Header />
+        <main className="px-4">
             {children}
+        </main>
         <Footer /> 
-    </main>
+    </div>
   )
 }
 export default Layout
