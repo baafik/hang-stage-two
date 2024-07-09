@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from "./App"
 import Cart from "./routes/Cart"
 
-import "./routes.css"
+// import "./routes.css"
 import Checkout from "./routes/Checkout"
 
 const Router = () => {

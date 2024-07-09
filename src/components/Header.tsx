@@ -5,7 +5,7 @@ import { headerIcon } from "../assets"
 
 const Header = () => {
   return (
-    <header className="w-screen bg-pri h-32 text-black flex px-4 pb-4">
+    <header className="w-screen bg-pri h-32 text-black flex box-border px-4 pb-4">
         <div className="w-1/5 flex items-center justify-center">
             <img src={headerIcon} alt="" className="md:w-1/3"/>
         </div>
