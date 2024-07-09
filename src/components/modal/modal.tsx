@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import "./modal.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 interface ModalProps {
   isOpen: boolean;
@@ -10,7 +8,7 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, children, onClose }) => {
   if (!isOpen) {
     return null;
   }
@@ -19,10 +17,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     <>
       <div className="backdrop" onClick={onClose} />
       <div className="modal">
-        <div className="modal-header">
-          <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={onClose} />
-        </div>
+        <button onClick={onClose} className="modal-close-button">×</button>
         {children}
+        <div className="modal-buttons">
+          <button className="view-cart-button">View Cart</button>
+          <button className="continue-shopping-button" onClick={onClose}>
+            Continue Shopping
+          </button>
+        </div>
       </div>
     </>
   );

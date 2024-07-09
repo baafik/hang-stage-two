@@ -85,7 +85,6 @@ function App() {
     setModalVisible(false);
     setSelectedProduct(null);
   };
-  console.log("product", selectedProduct)
 
   return (
     <>
