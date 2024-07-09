@@ -21,55 +21,55 @@ const products = [
   {
     name: "Rafaello",
     image: Rafello,
-    price: 9.99,
+    price: 10000,
     id: 1,
   },
   {
     name: "Plain Belgian",
     image: PlainBelgian,
-    price: 5.99,
+    price: 10000,
     id: 2,
   },
   {
     name: "Milk Chocolate",
     image: MilkChocolate,
-    price: 7.99,
+    price: 10000,
     id: 3,
   },
   {
     name: "Shrimp & Basil",
     image: shrimp,
-    price: 12.99,
+    price: 10000,
     id: 4,
   },
   {
     name: "Lemon Iced",
     image: lemonIced,
-    price: 15.99,
+    price: 10000,
     id: 5,
   },
   {
     name: "Churro",
     image: churro,
-    price: 6.99,
+    price: 10000,
     id: 6,
   },
   {
     name: "Biscoff",
     image: biscoff,
-    price: 8.99,
+    price: 10000,
     id: 7,
   },
   {
     name: "Waffle Pops",
     image: wafflePops,
-    price: 10.99,
+    price: 10000,
     id: 8,
   },
   {
     name: "Salted Caramel",
     image: saltedCaramel,
-    price: 11.99,
+    price: 10000,
     id: 9,
   },
 ];
@@ -102,10 +102,10 @@ function App() {
 
           <div>
             <h4>Filter by price</h4>
-            <p>₦2500 - ₦4000</p>
-            <p>₦4000 - ₦6000</p>
-            <p>₦6000 - ₦8000</p>
-            <p>₦8000 - ₦10000</p>
+            <p>₦2500 - 4000</p>
+            <p>₦4000 - 6000</p>
+            <p>₦6000 - 8000</p>
+            <p>₦8000 - 10000</p>
             <p>₦10000 +</p>
           </div>
         </div>
