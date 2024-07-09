@@ -4,8 +4,10 @@ import Icon from "../../assets/headerIcon.png";
 import userIcon from "../../assets/icons/AiOutlineUser.png";
 import searchIcon from "../../assets/icons/AiOutlineSearch.png";
 import cartIcon from "../../assets/icons/AiOutlineShoppingCart.png";
+import { useNavigate } from "react-router-dom";
 
 const NavHeader: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <header className="header-view">
       <div className="image-view">
@@ -29,7 +31,13 @@ const NavHeader: React.FC = () => {
               <img src={searchIcon} alt="search icon" />
             </li>
             <li className="icon-item">
-              <img src={cartIcon} alt="cart icon" />
+              <img
+                onClick={() => {
+                  navigate("/cart");
+                }}
+                src={cartIcon}
+                alt="cart icon"
+              />
             </li>
             <li className="icon-item">
               <img src={userIcon} alt="user icon" />

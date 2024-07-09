@@ -11,9 +11,11 @@ import churro from "./assets/products/Churro.jpg";
 import biscoff from "./assets/products/Biscof.jpg";
 import wafflePops from "./assets/products/wafflepops.jpg";
 import saltedCaramel from "./assets/products/saltedcaramel.jpg";
-import Footer from "./components/footer/footer";
+// import Footer from "./components/footer/footer";
 import Modal from "./components/modal/modal";
 import ModalCard from "./components/modalcard/ModalCard";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const products = [
   {
@@ -88,7 +90,7 @@ function App() {
 
   return (
     <>
-      <NavHeader />
+      <Header />
       <div className="body-wrapper">
         <div className="center-div">
           <h1 className="productHeader">Browse by Category</h1>
