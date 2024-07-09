@@ -72,15 +72,21 @@ const products = [
   },
 ];
 
-// const renderProducts = () => {
-
-//   return (
-
-//   );
-// };
-
 function App() {
   const [modalVisible, setModalVisible] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+
+  const openModal = (product: any) => {
+    setSelectedProduct(product);
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+    setSelectedProduct(null);
+  };
+  console.log("product", selectedProduct)
+
   return (
     <>
       <NavHeader />
@@ -103,50 +109,35 @@ function App() {
           </div>
         </div>
         <div className="productWrapper">
-          {
-            <div className="three-column-container">
-              {products.map((product) => (
-                <div className="three-column-item" key={product.id}>
-                  <ProductCard
-                    onClick={() => {
-                      setModalVisible(true);
-                      // console.log("hi");
-                    }}
-                    name={product.name}
-                    imageUrl={product.image}
-                    price={product.price}
-                  />
-                </div>
-              ))}
-            </div>
-          }
+          <div className="three-column-container">
+            {products.map((product) => (
+              <div
+                className="three-column-item"
+                key={product.id}
+                onClick={() => openModal(product)}
+              >
+                <ProductCard
+                  name={product.name}
+                  imageUrl={product.image}
+                  price={product.price}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <footer>
         <Footer />
       </footer>
 
-      {modalVisible && (
-        <Modal
-          children={
-            <ModalCard
-              description="This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product
-            This is a description of the product"
-            />
-          }
-          isOpen={modalVisible}
-          closeModal={() => setModalVisible(false)}
-          onClose={() => setModalVisible(false)}
-        ></Modal>
+      {modalVisible && selectedProduct && (
+        <Modal isOpen={modalVisible} onClose={closeModal}>
+          <ModalCard
+            title={selectedProduct.name}
+            description={`This is a description of the product: ${selectedProduct.name}`}
+            imageUrl={selectedProduct.image}
+          />
+        </Modal>
       )}
     </>
   );
