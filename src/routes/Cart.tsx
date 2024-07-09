@@ -2,8 +2,10 @@ import { IconButton, TextField } from "@mui/material"
 import { Icon } from "@iconify/react"
 import Layout from "../components/Layout"
 import { plainBelgain } from "../assets"
+import { useState } from "react"
 // import './routes.css'
 const Cart = () => {
+	const [orderNotes, setOrderNotes] = useState("")
 	return (
 		<Layout>
 			<div className='flex items-center gap-x-2 text-black/70 md:px-8 lg:px-32'>
@@ -12,7 +14,7 @@ const Cart = () => {
 				<span>Cart</span>
 			</div>
 			<h2 className='text-3xl md:hidden font-bold'>Plain Belgian</h2>
-			<div className='w-full flex flex-col items-center md:flex-row md:gap-x-16 lg:gap-x-48   py-8 md:py-16  md:px-8 lg:px-32'>
+			<div className='w-full flex flex-col items-center md:flex-row md:gap-x-16 lg:gap-x-16  md:px-8 lg:px-32 box-border '>
 				<div className=''>
 					<div className='w-full py-4 space-y-4'>
 						<div className='max-w-[250px] mx-auto'>
@@ -48,6 +50,8 @@ const Cart = () => {
 							multiline
 							rows={4}
                             className="w-full"
+							value={orderNotes}
+							onChange={e=> setOrderNotes(e.target.value)}
 						/>
 					</div>
 				</div>
